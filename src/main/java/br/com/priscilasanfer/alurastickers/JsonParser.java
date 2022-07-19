@@ -1,3 +1,5 @@
+package br.com.priscilasanfer.alurastickers;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
