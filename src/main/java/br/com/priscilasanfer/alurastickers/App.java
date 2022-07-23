@@ -1,7 +1,9 @@
 package br.com.priscilasanfer.alurastickers;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -29,15 +31,24 @@ public class App {
         var body = response.body();
         System.out.println(body);
 
-        // extrair so os dados que interessam ( titulo, poster, classificação)
+        // extrair so os dados que interessam (titulo, poster, classificação)
         JsonParser parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
 
         // exibir e manipular os dados
         for (Map<String, String> filme : listaDeFilmes) {
+            String urlImagem = filme.get("image");
+            String titulo = filme.get("title");
+
+            InputStream inputStream = new URL(urlImagem).openStream();
+            String nomeArquivo = titulo + ".png";
+
+            GeradorDeFigurinha geradora = new GeradorDeFigurinha();
+            geradora.cria(inputStream, nomeArquivo);
+
             System.out.println();
-            System.out.println(RED + "Título: " + RESET + filme.get("title"));
-            System.out.println(RED + "Pôster: " + RESET + filme.get("image"));
+            System.out.println(RED + "Título: " + RESET + titulo);
+            System.out.println(RED + "Pôster: " + RESET + urlImagem);
             System.out.println(RED + "Nota imDb: " + RESET + filme.get("imDbRating"));
 
             var classificacao = Float.parseFloat(filme.get("imDbRating"));

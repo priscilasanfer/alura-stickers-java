@@ -28,3 +28,33 @@ Tudo isso sem usar nenhuma biblioteca externa!
 
 - [Artigo na Alura “O que é JSON?”](https://www.alura.com.br/artigos/o-que-e-json)
 - [Artigo na Alura sobre como pintar o terminal, com tabelinha de cores e negrito](https://www.alura.com.br/artigos/decorando-terminal-cores-emojis)
+
+
+## Aula 2 - GERANDO FIGURINHAS PARA WHATSAPP
+Nesta segunda aula vamos criar um gerador de figurinhas explorando outras bibliotecas nativas do Java, para que possamos enviar por Whatsapp os nossos filmes preferidos!
+
+
+### Links citados
+
+- Documentação do [pacote javax.imageio](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/imageio/package-summary.html), que trata de leitura e escrita de imagens.
+- Documentação da [classe BufferedImage](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/image/BufferedImage.html), que representa uma imagem no Java
+- Documentação da [classe Graphics2D](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Graphics2D.html), a “caneta” que permite escrever, desenhar e imprimir outras imagens em uma imagem original.
+- Documentação da [abstração InputStream](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html), que representa um fluxo de leitura de dados de qualquer fonte, como arquivos, URLs, entre outros.
+
+### Desafios desta aula
+
+1 - Ler a documentação da classe abstrata InputStream.  
+2 - Centralizar o texto na figurinha.  
+3 - Fazer um pacote no Whatsapp e/ou Telegram com as suas próprias figurinhas!  
+4 - Criar diretório de saída das imagens, se ainda não existir.  
+5 - Colocar outra fonte como a Comic Sans ou a Impact, a fonte usada em memes.  
+6 - Colocar uma imagem de você que está fazendo esse curso sorrindo, fazendo joinha!  
+7 - Colocar contorno (outline) no texto da imagem.  
+8 - Tratar as imagens retornadas pela API do IMDB para pegar uma imagem maior ao invés dos thumbnails. Opções: pegar a URL da imagem e remover o trecho mostrado durante a aula ou consumir o endpoint de posters da API do IMDB (mais trabalhoso), tratando o JSON retornado.  
+9 - Fazer com que o texto da figurinha seja personalizado de acordo com as classificações do IMDB.  
+10 - Desafio supremo: usar alguma biblioteca de manipulação de imagens como OpenCV pra extrair imagem principal e contorná-la.  
+
+### Material complementar
+
+- Primeira aula do curso [“Java Polimorfismo: entenda herança e interfaces”](https://www.alura.com.br/conteudo/java-heranca-interfaces-polimorfismo) da Alura.  
+- Apêndice da apostila [“Java e Orientação a Objetos”](https://www.alura.com.br/apostila-java-orientacao-objetos/apendice-pacote-java-io) da Alura sobre o pacote java.io que explica com mais detalhes a abstração InputStream.  
